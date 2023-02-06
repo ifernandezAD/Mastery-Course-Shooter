@@ -14,8 +14,11 @@ public class WeaponProjectileLauncher : WeaponComponent
     protected override void WeaponFired()
     {
         Vector3 direction = GetDirection();
+        
+        //Apaño
+        Vector3 correctDirectionY = new Vector3(direction.x, direction.y + 90, direction.z);
 
-        var projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(direction));
+        var projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(correctDirectionY));
         projectile.velocity = direction * velocity;
     }
 

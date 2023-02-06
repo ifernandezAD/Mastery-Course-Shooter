@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6811822504824135402}
   - component: {fileID: 3515481192991637320}
-  m_Layer: 0
+  - component: {fileID: 1977965952277914399}
+  m_Layer: 7
   m_Name: Blaster Shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5591082958640654421}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -101.364, y: 1.335, z: 50.49884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -49,6 +50,20 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 2
+--- !u!114 &1977965952277914399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591082958640654421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa458c1e1850abc4a94e0e788d0933a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 6306974656900704190, guid: 4ec05850f348ae244af6604603b5195d,
+    type: 3}
 --- !u!1 &8602910806381090628
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +76,7 @@ GameObject:
   - component: {fileID: 789025843024352319}
   - component: {fileID: 196886020044493494}
   - component: {fileID: 6262309592730085291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Blaster Shot Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
