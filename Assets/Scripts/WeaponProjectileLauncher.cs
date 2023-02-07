@@ -4,8 +4,8 @@ using UnityEngine;
 public class WeaponProjectileLauncher : WeaponComponent
 {
 
-    [SerializeField] private Rigidbody projectilePrefab;
-    [SerializeField] private float velocity = 40f;
+    [SerializeField] private Projectile projectilePrefab;
+    [SerializeField] private float moveSpeed = 40f;
 
     private RaycastHit hitInfo;
     [SerializeField] private float maxDistance = 100f;
@@ -18,8 +18,8 @@ public class WeaponProjectileLauncher : WeaponComponent
         //Apaño
         Vector3 correctDirectionY = new Vector3(direction.x, direction.y + 90, direction.z);
 
-        var projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(correctDirectionY));
-        projectile.velocity = direction * velocity;
+        var projectile = projectilePrefab.Get<Projectile>(transform.position, Quaternion.Euler(direction));
+        projectile.GetComponent<Rigidbody>().velocity = direction * moveSpeed;
     }
 
     private Vector3 GetDirection()

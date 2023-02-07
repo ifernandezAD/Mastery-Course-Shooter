@@ -5,11 +5,10 @@ using UnityEngine;
 public class ParticleOnImpact : MonoBehaviour
 {
 
-    [SerializeField] private GameObject particlePrefab;
+    [SerializeField] private ProjectileImpact particlePrefab;
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(particlePrefab, transform.position, Quaternion.LookRotation(collision.contacts[0].normal));
-        Destroy(gameObject);
+        particlePrefab.Get<ProjectileImpact> (transform.position, Quaternion.LookRotation(collision.contacts[0].normal));       
     }
 }
