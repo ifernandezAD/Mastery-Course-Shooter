@@ -15,9 +15,6 @@ public class WeaponProjectileLauncher : WeaponComponent
     {
         Vector3 direction = GetDirection();
         
-        //Apaño
-        Vector3 correctDirectionY = new Vector3(direction.x, direction.y + 90, direction.z);
-
         var projectile = projectilePrefab.Get<Projectile>(transform.position, Quaternion.Euler(direction));
         projectile.GetComponent<Rigidbody>().velocity = direction * moveSpeed;
     }
