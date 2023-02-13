@@ -9,10 +9,16 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float fireDelay = 0.25f;
 
     private float fireTimer;
+    private WeaponAmmo ammo;
 
     public event Action OnFire = delegate { };
 
     public KeyCode WeaponHotKey { get { return weaponHotkey; } }
+
+    private void Awake()
+    {
+        ammo = GetComponent<WeaponAmmo>();
+    }
 
     void Update()
     {
@@ -29,6 +35,9 @@ public class Weapon : MonoBehaviour
 
     private bool CanFire()
     {
+        if (ammo != null && ammo.IsAmmoReady() == false)
+            return false;
+
         return fireTimer >= fireDelay;
     }
 
