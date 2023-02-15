@@ -11,8 +11,8 @@ public class UIAmmoText : MonoBehaviour
 
     private void Awake()
     {
-        tmproText = GetComponent<TMPro.TextMeshProUGUI>();
-        Inventory.OnWeaponChanged += Inventory_OnWeaponChanged;
+        tmproText = GetComponent<TMPro.TextMeshProUGUI>();      
+        Inventory.OnWeaponChanged += Inventory_OnWeaponChanged;       
     }
 
     private void Inventory_OnWeaponChanged(Weapon weapon)

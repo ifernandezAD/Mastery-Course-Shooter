@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class WeaponAmmo : WeaponComponent
@@ -19,6 +20,14 @@ public class WeaponAmmo : WeaponComponent
         base.Awake();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(Reload());
+        }
+    }
+
     public bool IsAmmoReady()
     {
         return ammoInClip > 0;
@@ -33,6 +42,22 @@ public class WeaponAmmo : WeaponComponent
     {
         ammoInClip--;
         OnAmmoChanged();
+    }
+
+    private IEnumerator Reload()
+    {
+        int ammoMissingFromClip = maxAmmoPerClip - ammoInClip;
+        int ammoToMove = Math.Min(ammoMissingFromClip, ammoRemainingNotInClip);
+
+        while (ammoToMove > 0)
+        {
+            yield return new WaitForSeconds(0.2f);
+            ammoInClip += 1;
+            ammoRemainingNotInClip -= 1;
+            OnAmmoChanged();
+            ammoToMove--;
+        }
+
     }
 
     internal string GetAmmoText()

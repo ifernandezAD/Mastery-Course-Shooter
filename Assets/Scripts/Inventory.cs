@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -8,6 +6,11 @@ public class Inventory : MonoBehaviour
     public static event Action<Weapon> OnWeaponChanged = delegate { };
 
     [SerializeField] private Weapon[] weapons;
+
+    private void Awake()
+    {      
+        SwithToWeapon(weapons[0]);
+    }
 
     void Update()
     {
@@ -27,6 +30,7 @@ public class Inventory : MonoBehaviour
         {
             weapon.gameObject.SetActive(weapon == weaponToSwitchTo);
         }
+
         OnWeaponChanged(weaponToSwitchTo);
     }
 }
