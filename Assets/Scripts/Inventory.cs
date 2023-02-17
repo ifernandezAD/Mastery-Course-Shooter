@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -7,8 +8,8 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private Weapon[] weapons;
 
-    private void Awake()
-    {      
+    private void Start()
+    {
         SwithToWeapon(weapons[0]);
     }
 
@@ -33,4 +34,5 @@ public class Inventory : MonoBehaviour
 
         OnWeaponChanged(weaponToSwitchTo);
     }
+
 }
