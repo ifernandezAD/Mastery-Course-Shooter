@@ -15,6 +15,8 @@ public class Weapon : MonoBehaviour
 
     public KeyCode WeaponHotKey { get { return weaponHotkey; } }
 
+    public bool IsInAimMode { get { return Input.GetMouseButton(1)==false; } }
+
     private void Awake()
     {
         ammo = GetComponent<WeaponAmmo>();

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WeaponProjectileLauncher : WeaponComponent
 {
-
+    [SerializeField] private Transform firePoint;
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private float moveSpeed = 40f;
 
@@ -13,9 +13,9 @@ public class WeaponProjectileLauncher : WeaponComponent
 
     protected override void WeaponFired()
     {
-        Vector3 direction = GetDirection();
+        Vector3 direction = weapon.IsInAimMode ? GetDirection() : firePoint.forward;
         
-        var projectile = projectilePrefab.Get<Projectile>(transform.position, Quaternion.Euler(direction));
+        var projectile = projectilePrefab.Get<Projectile>(firePoint.position, Quaternion.Euler(direction));
         projectile.GetComponent<Rigidbody>().velocity = direction * moveSpeed;
     }
 

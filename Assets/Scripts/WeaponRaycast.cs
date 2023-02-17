@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class WeaponRaycast : WeaponComponent
 {
+    [SerializeField] private Transform firePoint;
+
     private RaycastHit hitInfo;
 
     [SerializeField] private float maxDistance = 100f;
@@ -13,7 +15,10 @@ public class WeaponRaycast : WeaponComponent
 
     protected override void WeaponFired()
     {
-        Ray ray = Camera.main.ViewportPointToRay(Vector3.one / 2);
+        Ray ray = weapon.IsInAimMode ?
+            Camera.main.ViewportPointToRay(Vector3.one / 2) :
+            new Ray(firePoint.position, firePoint.forward);
+            
 
         if (Physics.Raycast(ray, out hitInfo, maxDistance, layerMask))
         {
