@@ -1,39 +1,9 @@
 fileFormatVersion: 2
-guid: 63ced983496201e4493f666b667630d5
+guid: 3838939907e306b45a2da90a9f75c749
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: mremireh_body__diffuse
-    second: {fileID: 2800000, guid: acfb2e278fd939a4e927ab0209d3a4e1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: mremireh_body_normal
-    second: {fileID: 2800000, guid: a2a60ff886765f946bafd0807df89cfd, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: mremireh_body_specular
-    second: {fileID: 2800000, guid: da77c1d2903af3846ad9d6385d705e6f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: mremireh_shoe_diffuse
-    second: {fileID: 2800000, guid: b1b4263029aee754dbe3b6fcae8cd5f4, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: mremireh_shoe_normal
-    second: {fileID: 2800000, guid: 29cf37421dd38684d8c8c6aa27cfa078, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: mremireh_shoe_specular
-    second: {fileID: 2800000, guid: 01e07a0a030fa524e976eb3441b8bc16, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -824,11 +794,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 63ced983496201e4493f666b667630d5,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

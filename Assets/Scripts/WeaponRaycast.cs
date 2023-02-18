@@ -22,7 +22,16 @@ public class WeaponRaycast : WeaponComponent
 
         if (Physics.Raycast(ray, out hitInfo, maxDistance, layerMask))
         {
-            SpawnDecal(hitInfo.point, hitInfo.normal);
+            Health health = hitInfo.collider.GetComponent<Health>();
+
+            if (health != null)
+            {
+                health.Takehit(1);
+            }
+            else
+            {
+                SpawnDecal(hitInfo.point, hitInfo.normal);
+            }       
         }
     }
 
