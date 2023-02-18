@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,6 +7,11 @@ public class ZombieNavigation : MonoBehaviour
     private NavMeshPath path;
     private GameObject cube;
 
+    private void Awake()
+    {
+        GetComponent<Health>().OnDied += ZombieAnimator_OnDied;
+    }
+
     void Start()
     {
         playerTransform = FindObjectOfType<PlayerMovement>().transform;
@@ -17,12 +20,12 @@ public class ZombieNavigation : MonoBehaviour
         cube.GetComponent<Collider>().enabled = false;
     }
 
-    
+
     void Update()
     {
         var targetPosition = playerTransform.position;
 
-        bool foundPath = NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas,path);
+        bool foundPath = NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
         if (foundPath)
         {
             Vector3 nextDestination = path.corners[1];
@@ -39,5 +42,10 @@ public class ZombieNavigation : MonoBehaviour
 
 
         }
+    }
+
+    private void ZombieAnimator_OnDied()
+    {
+        this.enabled = false;
     }
 }
