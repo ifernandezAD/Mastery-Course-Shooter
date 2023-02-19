@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!243 &-8433010051849016168
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Zombie Grunts
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 4b7548f1ff6d0f0429b730b982e07353
+  m_Children: []
+  m_Volume: b84e8c5f7f932344f9f8bd599e573f02
+  m_Pitch: ff9ca81906b77dc4487b8dcdd40f41b2
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -1638387250616615737}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &-1638387250616615737
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 49b9043cc9c6745479829eb9fbf4244c
+  m_EffectName: Attenuation
+  m_MixLevel: 151312c16d7ece44aad6c67ac52a5700
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-102743487212055544
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -40,6 +73,7 @@ AudioMixerController:
     - 74151bb54ee121e48a2ecba602e31213
     - c0dc232f77a760e47b32ba1f2f12b527
     - f4c886620a113824d91ddf464b0be355
+    - 4b7548f1ff6d0f0429b730b982e07353
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -55,6 +89,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 6284804380527622506}
   - {fileID: -102743487212055544}
+  - {fileID: -8433010051849016168}
   m_Volume: 6292f18e623dc614db8b560a1ed795ed
   m_Pitch: 100cdd542d181fe46b800fc69341f5c0
   m_Send: 00000000000000000000000000000000
