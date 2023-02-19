@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponAmmo : WeaponComponent
 {
+    [SerializeField] private bool infiniteAmmo;
     [SerializeField] private int maxAmmo = 24;
     [SerializeField] private int maxAmmoPerClip = 6;
 
@@ -48,6 +49,10 @@ public class WeaponAmmo : WeaponComponent
     {
         int ammoMissingFromClip = maxAmmoPerClip - ammoInClip;
         int ammoToMove = Math.Min(ammoMissingFromClip, ammoRemainingNotInClip);
+        if (infiniteAmmo)
+        {
+            ammoToMove = ammoMissingFromClip;
+        }
 
         while (ammoToMove > 0)
         {
@@ -62,6 +67,14 @@ public class WeaponAmmo : WeaponComponent
 
     internal string GetAmmoText()
     {
-        return string.Format("{0}/{1}", ammoInClip, ammoRemainingNotInClip);
+        if (infiniteAmmo)
+        {
+            return string.Format("{0}/∞", ammoInClip, ammoRemainingNotInClip);
+        }
+        else
+        {
+            return string.Format("{0}/{1}", ammoInClip, ammoRemainingNotInClip);
+        }
+        
     }
 }
