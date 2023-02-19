@@ -469,7 +469,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: -0.4123797, y: -0.032469865, z: -0.0147091085, w: 0.91031444}
+  m_LocalRotation: {x: -0.41237974, y: -0.03246987, z: -0.014709108, w: 0.91031444}
   m_LocalPosition: {x: -101.67001, y: 2, z: 48.49884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -878,7 +878,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517263021}
-  m_LocalRotation: {x: 0.14220114, y: 0.000000017031528, z: -0.0000000024467675, w: 0.9898378}
+  m_LocalRotation: {x: 0.14220114, y: -0.000000017031526, z: 0.0000000024467672, w: 0.9898378}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1167,7 +1167,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913559443}
-  m_LocalRotation: {x: -0.4123797, y: -0.032469865, z: -0.0147091085, w: 0.91031444}
+  m_LocalRotation: {x: -0.41237974, y: -0.03246987, z: -0.014709108, w: 0.91031444}
   m_LocalPosition: {x: -101.67001, y: 2, z: 48.49884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23678,11 +23678,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1824797179, guid: 109489f03edb5b7438e74e363cf3d443, type: 3}
+      propertyPath: audioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 2bf60b8d886802741973ac464a80444d,
+        type: 2}
     - target: {fileID: 5648498993534068305, guid: 109489f03edb5b7438e74e363cf3d443,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7144732674961497026, guid: 109489f03edb5b7438e74e363cf3d443,
+        type: 3}
+      propertyPath: audioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 67d6630757b2e6c479df98ae30e7a04c,
+        type: 2}
     - target: {fileID: 8438575523910282366, guid: 109489f03edb5b7438e74e363cf3d443,
         type: 3}
       propertyPath: m_RootOrder

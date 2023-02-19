@@ -4,7 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class WeaponSound : WeaponComponent
 {
-    
+    [SerializeField] private SimpleAudioEvent audioEvent;
+
     private AudioSource audioSource;
 
     private void Start()
@@ -14,6 +15,6 @@ public class WeaponSound : WeaponComponent
 
     protected override void WeaponFired()
     {
-        audioSource.Play();
+        audioEvent.Play(audioSource);
     }
 }
