@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bc8e971047dad41a8f0b4c75e336b4, type: 3}
   m_Name: PlayerGrunt
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 4b58a187003a68944beaa79e31644fd9, type: 3}
+  - {fileID: 8300000, guid: f2e94f26907d7ad47b2751268e6c7d32, type: 3}
+  - {fileID: 8300000, guid: 1fd854e978a0a9f43a2d0fea28c6a0be, type: 3}
+  - {fileID: 8300000, guid: 84b39796aa6658f4c99b49e277debf84, type: 3}
+  - {fileID: 8300000, guid: 565950e4bdb029d4cbb7a8f6bbe566d7, type: 3}
+  - {fileID: 8300000, guid: a2ae108f523b826488ca5eb4284fbd15, type: 3}
+  - {fileID: 8300000, guid: a623d0388f0e77b489331319f2f92b4e, type: 3}
+  - {fileID: 8300000, guid: 2821e90d87ad4694c814e340ed726227, type: 3}
