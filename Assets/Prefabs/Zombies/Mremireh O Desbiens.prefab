@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 340960777091656877}
   - component: {fileID: -4474152739296853337}
   - component: {fileID: 1059978726202047921}
+  - component: {fileID: -3098265474203885929}
   m_Layer: 0
   m_Name: Mremireh O Desbiens
   m_TagString: Untagged
@@ -303,6 +304,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioEvent: {fileID: 11400000, guid: 1325ecdb49966c54881e2857d425b2f4, type: 2}
+--- !u!114 &-3098265474203885929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450548763603173197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de7ba7ddacb392448f44417a9b6a60f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPoolSize: 15
+  returnToPoolDelay: 10
 --- !u!1 &621180213314355290
 GameObject:
   m_ObjectHideFlags: 0
