@@ -3,16 +3,22 @@ using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
-
+    [Header("Third Person")]
     [SerializeField] CinemachineVirtualCamera followCamera;
     [SerializeField] CinemachineFreeLook freeLookCamera;
+    [SerializeField] private float thirdPersonLookSensitivity = 1f;
 
-    [SerializeField] private float mouseLookSensitivity = 0.5f;
+    [Header("First Person")]
+    [SerializeField] CinemachineVirtualCamera fpsCamera;
+    [SerializeField] private float firstPersonLookSensitivity = 1f;
 
     private CinemachineComposer aim;
 
+   
+
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         aim = followCamera.GetCinemachineComponent<CinemachineComposer>();   
     }
 
@@ -31,10 +37,13 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) == false)
         {
-            var vertical = Input.GetAxis("Mouse Y") * mouseLookSensitivity;
+            var vertical = Input.GetAxis("Mouse Y") * thirdPersonLookSensitivity;
             aim.m_TrackedObjectOffset.y += vertical;
             aim.m_TrackedObjectOffset.y = Mathf.Clamp(aim.m_TrackedObjectOffset.y, -10f, 10f);
         }
+
+        var fpsVertical = Input.GetAxis("Mouse Y") * firstPersonLookSensitivity;
+        fpsCamera.transform.Rotate(Vector3.right, -fpsVertical);
 
     }
 }
